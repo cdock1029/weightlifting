@@ -1,5 +1,4 @@
-<!-- <.header_nav /> -->
-<%= live_render(@socket, WeightliftingWeb.HeaderLive, id: "header_nav", sticky: true) %>
+<%= live_render @socket, WeightliftingWeb.HeaderLive, id: "header_nav", sticky: true, container: {:header, class: ""} %>
 <main class="container">
   <p class="alert alert-info" role="alert"
     phx-click="lv:clear-flash"
@@ -8,6 +7,5 @@
   <p class="alert alert-danger" role="alert"
     phx-click="lv:clear-flash"
     phx-value-key="error"><%= live_flash(@flash, :error) %></p>
-
   <%= @inner_content %>
 </main>
